@@ -50,7 +50,7 @@ async function getUrlList(): Promise < any[] > {
 
 async function getProjectUrlList(): Promise < any[] > {
     let users: any[] = [];
-    const response:any =  await axios.get(Dev+'/lists/projects//', {
+    const response:any =  await axios.get(Dev+'/lists/projects/', {
         // headers: {
         //     Authorization: auth_key 
         // }
