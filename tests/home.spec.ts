@@ -44,7 +44,7 @@ test('test', async ({}) => {
             waitUntil: 'domcontentloaded'
           });
           await page.screenshot({
-            path: 'public/home/' + uidInfo.uid + '/' + screen.code + '.png',
+            path: '/logs/public/home/' + uidInfo.uid + '/' + screen.code + '.png',
             // fullPage: true
           });
           let end_mi = Date.now();

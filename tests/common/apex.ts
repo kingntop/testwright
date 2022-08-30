@@ -140,8 +140,6 @@ async function postDelApex(days: string):Promise < boolean > {
     }
 }
 
-
-
 async function postApexScreen(rid :string, upJson: any):Promise < boolean > {
     const request_config = {
         headers: {
@@ -202,6 +200,9 @@ export {
     getProjectUrlList,
     getCodeList,
     postDelApex,
-    postApeResource
+    postApeResource,
+    postApexScreen,
+    getUidAll,
+    getUid
 }
 
