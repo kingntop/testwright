@@ -94,7 +94,6 @@ async function postApex(upJson: any):Promise < boolean > {
     }
 }
 
-
 async function postApeResource(upJson: any):Promise < boolean > {
     const request_config = {
         headers: {
@@ -121,13 +120,8 @@ async function postApeResource(upJson: any):Promise < boolean > {
 
 
 async function postDelApex(days: string):Promise < boolean > {
-    const delDbUrl = 'http://localhost/ords/playwright/lists/settings/'
-
     const article = { days: days, Authorization : auth_key };
-    const response = await axios.post(delDbUrl, article);
-
-    console.log(delDbUrl, days, auth_key)
-
+    const response = await axios.post(Dev +'/lists/settings/', article);
     try {
         if (response.status === 200) { // response - object, eg { status: 200, message: 'OK' }
             console.log(response.data);
