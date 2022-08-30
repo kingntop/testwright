@@ -61,7 +61,7 @@ async function getProjectUrlList(): Promise < any[] > {
 
 async function getCodeList(): Promise < any[] > {
     let users: any[] = [];
-    const response:any =  await axios.get('http://localhost/ords/playwright/lists/settings/', {
+    const response:any =  await axios.get(Dev +'/lists/settings/', {
         // headers: {
         //     Authorization: auth_key 
         // }
