@@ -24,13 +24,14 @@ import axios, {
 // const json_url = 'jons//jsons/'
 
 
-const p_url = 'http://localhost/ords/playwright/jons/jsons/'
+const Dev = 'https://gb9fb258fe17506-apexdb.adb.ap-seoul-1.oraclecloudapps.com/ords/twright';
+
 
 const auth_key = '766614B7C9A901198F2F5630349ADB7A9DAFB63976AF64DBB8A775D3BCCBDDB1'
 
 async function getUrlList(): Promise < any[] > {
     let users: any[] = [];
-    const response:any =  await axios.get('http://localhost/ords/playwright/lists/lists/', {
+    const response:any =  await axios.get(Dev+'/lists/lists/', {
         // headers: {
         //     Authorization: auth_key 
         // }
@@ -41,7 +42,7 @@ async function getUrlList(): Promise < any[] > {
 
 async function getProjectUrlList(): Promise < any[] > {
     let users: any[] = [];
-    const response:any =  await axios.get('http://localhost/ords/playwright/lists/projects/', {
+    const response:any =  await axios.get(Dev+'/lists/projects//', {
         // headers: {
         //     Authorization: auth_key 
         // }
@@ -71,8 +72,8 @@ async function postApex(upJson: any):Promise < boolean > {
         maxBodyLength: Infinity,
         data: upJson
     };
-    const response = await axios.post(p_url,  upJson, request_config);
-    console.log(p_url, upJson)
+    const response = await axios.post(Dev + '/results//lists/',  upJson, request_config);
+
     try {
         if (response.status === 200) { // response - object, eg { status: 200, message: 'OK' }
             console.log(response.data);
