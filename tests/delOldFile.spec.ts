@@ -55,7 +55,7 @@ test('Old File Remove', async ({ page }) => {
     }
   }
   await postDelApex(aMonthBeforeDB.trim())
-  await page.goto('http://localhost/');
+  await page.goto('https://cs.raiid.ai/');
   
 });
 
