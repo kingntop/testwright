@@ -1,4 +1,5 @@
 #!/bin/bash
 
-cd /root/auton
+cd /root/testwright
 echo "$PWD"
+npx playwright test home.spec.ts
