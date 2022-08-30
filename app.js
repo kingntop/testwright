@@ -10,7 +10,7 @@ const shell_exec_1 = require("shell-exec");
 const app = express();
 const router = express.Router();
 
-app.use(express.static('public'));
+app.use(express.static('/logs/public'));
 // Certificate 인증서 경로
 const privateKey = fs.readFileSync('/etc/letsencrypt/live/cs.raiid.ai/privkey.pem', 'utf8');
 const certificate = fs.readFileSync('/etc/letsencrypt/live/cs.raiid.ai/cert.pem', 'utf8');
