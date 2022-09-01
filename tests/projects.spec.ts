@@ -54,7 +54,8 @@ test('Projects Test', async ({}, expect) => {
     const browser = await chromium.launch();
     const context = await browser.newContext({
       recordVideo: {
-        dir: dirVideo
+        dir: dirVideo,
+        size: { width: 1920, height: 1080  },
       }
     });
     await context.tracing.start({
