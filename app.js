@@ -10,6 +10,8 @@ const app = express();
 const router = express.Router();
 const cors = require('cors');
 
+app.use(cors());
+
 app.use(express.static('/logs/public'));
 // Certificate 인증서 경로
 const privateKey = fs.readFileSync('/etc/letsencrypt/live/cs.raiid.ai/privkey.pem', 'utf8');
