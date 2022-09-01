@@ -7,11 +7,6 @@ import axios, {
 const Dev = 'https://gb9fb258fe17506-apexdb.adb.ap-seoul-1.oraclecloudapps.com/ords/twright';
 const auth_key = '766614B7C9A901198F2F5630349ADB7A9DAFB63976AF64DBB8A775D3BCCBDDB1'
 
-const DEV = 'https://gb9fb258fe17506-apexdb.adb.ap-seoul-1.oraclecloudapps.com/ords/twright/'
-
-const get_url  = DEV + 'v1/twright/tests/'
-const get_all_url = DEV + 'twright/v1/twright/tests'
-
 async function getUrlList(): Promise < any[] > {
     let users: any[] = [];
     const response:any =  await axios.get(Dev+'/lists/lists/', {
@@ -93,7 +88,6 @@ async function postApeResource(upJson: any):Promise < boolean > {
     }
 }
 
-
 async function postDelApex(days: string):Promise < boolean > {
     const article = { days: days, Authorization : auth_key };
     const response = await axios.post(Dev +'/lists/settings/', article);
@@ -135,12 +129,9 @@ async function postApexScreen(rid :string, upJson: any):Promise < boolean > {
     }
 }
 
-
 async function getUid(uid: string): Promise < any[] > {
     let users: any[] = [];
-    // userinfo_url = get_url + payment
-    console.log(get_url + uid)
-    const response:any =  await axios.get(get_url + uid, {
+    const response:any =  await axios.get(Dev + '/v1/twright/tests/' + uid, {
         // headers: {
         //     Authorization: auth_key
         // }
@@ -161,7 +152,6 @@ async function getUidAll(): Promise < any[] > {
     console.log(response.data)
     return response.data.items
 }
-
 
 async function getMulitScreen(): Promise < any[] > {
     let users: any[] = [];
