@@ -28,7 +28,7 @@ test('test', async ({}) => {
   const uidInfos = await getMulitScreen();
 
   for (const uidInfo of uidInfos) {
-    console.log(uidInfo.test_id);
+    // console.log(uidInfo.test_id);
     const screens = uidInfo.screen;
     const browserTypes = [chromium, webkit];
     for (const browserType of browserTypes) {
@@ -77,7 +77,7 @@ test('test', async ({}) => {
       data : Json
 
     }
-    console.log(uidInfo.test_id);
+    console.log(aJson);
     Json = []
     await postApex(aJson)
   }
