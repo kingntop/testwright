@@ -119,7 +119,7 @@ async function postApexScreen(rid :string, upJson: any):Promise < boolean > {
         maxBodyLength: Infinity,
         data: upJson
     };
-    const postUrl = 'https://gb9fb258fe17506-apexdb.adb.ap-seoul-1.oraclecloudapps.com/ords/twright/v1/twright/logs/' + rid;
+    const postUrl = Dev + '/v1/twright/logs/' + rid;
     console.log(postUrl, upJson)
     const response = await axios.post(postUrl, upJson, request_config);
     console.log(postUrl, upJson)
@@ -153,7 +153,7 @@ async function getUidAll(): Promise < any[] > {
     let users: any[] = [];
 
     // console.log(get_all_url)
-    const response:any =  await axios.get('https://gb9fb258fe17506-apexdb.adb.ap-seoul-1.oraclecloudapps.com/ords/twright/v1/twright/tests', {
+    const response:any =  await axios.get(Dev + '/v1/twright/tests', {
         // headers: {
         //     Authorization: auth_key
         // }
