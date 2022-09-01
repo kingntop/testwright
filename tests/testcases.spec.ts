@@ -60,6 +60,7 @@ test('TestCase', async ({}) => {
     await context.tracing.stop({
       path: `/logs/public/trace/${urlList[i].test_id}/${today}.zip`
     });
+    
     await context.close();
     await browser.close();
     const files = fs.readdirSync(dirVideo);
