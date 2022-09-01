@@ -163,6 +163,19 @@ async function getUidAll(): Promise < any[] > {
 }
 
 
+async function getMulitScreen(): Promise < any[] > {
+    let users: any[] = [];
+
+    // console.log(get_all_url)
+    const response:any =  await axios.get(Dev + '/lists/lists/', {
+        // headers: {
+        //     Authorization: auth_key
+        // }
+    })
+    console.log(response.data)
+    return response.data.items
+}
+
 export {
     postApex,
     getUrlList,
@@ -172,6 +185,7 @@ export {
     postApeResource,
     postApexScreen,
     getUidAll,
-    getUid
+    getUid,
+    getMulitScreen
 }
 
