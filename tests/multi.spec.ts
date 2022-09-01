@@ -68,6 +68,9 @@ test('test', async ({}) => {
           Json.push(apexJson)
           await context.close();
           await browser.close();
+        } else {
+          await context.close();
+          await browser.close();
         }
       }
     }
