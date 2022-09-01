@@ -58,6 +58,7 @@ test('test', async ({}) => {
             url: uidInfo.url,
             gbn: 'M',
             name:uidInfo.test_name,
+            screen : screen.description,
             success: success,
             error: error,
             elapsed: elapsed,
