@@ -42,7 +42,7 @@ test('test', async ({}) => {
           const page = await context.newPage()
           let start_mi = Date.now();
           await page.goto(uidInfo.url, {
-            waitUntil: 'domcontentloaded'
+            waitUntil: 'networkidle'
           });
           await page.screenshot({
             path: '/logs/public/multiscreen/' + uidInfo.test_id + '/' +  today + '/' + screen.code + '.png',
