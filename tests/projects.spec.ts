@@ -55,7 +55,7 @@ test('Projects Test', async ({}, expect) => {
     const context = await browser.newContext({
       recordVideo: {
         dir: dirVideo,
-        size: { width: 640, height: 480 },
+        size: { width: 640, height: 640 },
       }
     });
     await context.tracing.start({
