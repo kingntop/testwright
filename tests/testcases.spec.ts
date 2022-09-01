@@ -17,6 +17,7 @@ import {
 import fs from 'fs';
 test('TestCase', async ({}) => {
   const urlList = await getUrlList();
+  console.log('urlList', urlList)
   for (let i = 0; i < urlList.length; i++) {
 
     const browser = await chromium.launch({
@@ -60,7 +61,7 @@ test('TestCase', async ({}) => {
     await context.tracing.stop({
       path: `/logs/public/trace/${urlList[i].test_id}/${today}.zip`
     });
-    
+
     await context.close();
     await browser.close();
     const files = fs.readdirSync(dirVideo);
@@ -79,6 +80,7 @@ test('TestCase', async ({}) => {
       traces: `/trace/${urlList[i].test_id}/${today}.zip`,
       video: `${videoDir}`,
     }
+    console.log('upJson', upJson)
     const result = await postApex(upJson);
   }
 })
