@@ -66,6 +66,8 @@ test('test', async ({}) => {
             screenshot: '/multiscreen/'+ uidInfo.test_id + '/' +  today + '/' + screen.code + '.png',
           }
           Json.push(apexJson)
+          await context.close();
+          await browser.close();
         }
       }
     }
