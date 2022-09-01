@@ -4,11 +4,11 @@ const http = require('http');
 const https = require('https');
 const express = require('express');
 
-
 const shell_exec_1 = require("shell-exec");
 
 const app = express();
 const router = express.Router();
+const cors = require('cors');
 
 app.use(express.static('/logs/public'));
 // Certificate 인증서 경로
