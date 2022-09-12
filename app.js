@@ -44,7 +44,7 @@ app.get('/tw', async (request, response, next) => {
 });
 
 
-router.get('/case1', async (request, response, next) => {
+app.get('/case1', async (request, response, next) => {
     
     const resJosn = {
        values : [
@@ -64,7 +64,7 @@ router.get('/case1', async (request, response, next) => {
         schema_type : '1.0'
     };
 
-    response.json(resJosn);
+    response.send(resJosn);
     // response.send('callback' + '('+ JSON.stringify(resJosn) + ');');
 });
 
