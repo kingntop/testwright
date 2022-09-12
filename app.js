@@ -44,7 +44,7 @@ app.get('/tw', async (request, response, next) => {
 });
 
 
-app.get('/case1', async (request, response, next) => {
+router.get('/case1', async (request, response, next) => {
     
     const resJosn = {
        values : [
