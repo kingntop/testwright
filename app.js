@@ -63,7 +63,8 @@ app.get('/case1', async (request, response, next) => {
         ],
         schema_type : '1.0'
     };
-    response.jsonp(resJosn);
+
+    response.json(resJosn);
     // response.send('callback' + '('+ JSON.stringify(resJosn) + ');');
 });
 
