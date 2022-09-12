@@ -47,7 +47,7 @@ app.get('/tw', async (request, response, next) => {
 app.get('/case1', async (request, response, next) => {
     
     const resJosn = {
-        [
+       values : [
             [
             '1',
             '대구분',
